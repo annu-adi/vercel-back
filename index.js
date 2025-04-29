@@ -1,15 +1,11 @@
 
-const express =require("express")
-
-const PORT=process.env.PORT||3000
-const app=express();
-
-//get route
-app.get('/', (req, res)=>{
-    return res.send("backend is running")
-})
-
-app.listen(PORT,()=>{
-    console.log('server is running ${PORT}')
-})
+let express = require ('express');
+let app=express();
+app.get('/', function (req, res){
+    res.send('this is message from the server side');
+});
+app.get('/home', function (req, res){
+    res.send('this is nessage from the server for the home page');
+});
+app.listen(3000);
 

@@ -5,7 +5,7 @@ const PORT=process.env.PORT||3000
 const app=express();
 
 //get route
-app.get("/", (req, res)=>{
+app.get('/', (req, res)=>{
     return res.send("backend is running")
 })
 
